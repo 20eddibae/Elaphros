@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elaphros"
+version = "0.1.0"
+description = "Elaphros: a small, fast sequence-to-function model"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.4", "numpy", "pandas", "zstandard"]
+
+[project.optional-dependencies]
+preprocessing = ["pyBigWig", "pysam"]
+ssm = ["mamba-ssm"]
+
+[tool.setuptools]
+packages = ["elaphros"]
